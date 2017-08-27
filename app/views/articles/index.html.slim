@@ -1,0 +1,16 @@
+h1 Listing Articles
+
+table
+	tr
+		th 
+		  strong Title
+		th
+		  strong Text
+
+	- @articles.each do |article|
+	  tr
+	    td = article.title
+	    td = article.text
+	    td = link_to 'Show', article_path(article)
+p 
+	/ = link_to 'Back', articles_path
